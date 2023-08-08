@@ -7,7 +7,7 @@ export default function Testinomials() {
         <div class="container">
           <div class="row">
             <div class="section-head">
-              <h3>Testimonials.</h3>
+              <h2>Testimonials.</h2>
             </div>
 
             <div class="col-md-offset-1 col-md-10">
