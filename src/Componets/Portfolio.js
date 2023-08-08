@@ -7,7 +7,7 @@ export default function Portfolio() {
         <div class="container">
           <div class="row">
             <div class="section-head">
-              <h3>Portfolio.</h3>
+              <h2>Portfolio.</h2>
             </div>
 
             <div class="filtering text-center mb-50">
