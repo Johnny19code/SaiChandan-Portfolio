@@ -9,7 +9,7 @@ export default function Services() {
       >
         <div class="container">
           <div class="section-head">
-            <h3>Services.</h3>
+            <h2>Services.</h2>
           </div>
 
           <div class="row">
