@@ -7,7 +7,7 @@ export default function Contact() {
         <div class="container">
           <div class="row">
             <div class="section-head">
-              <h3>Contact Us.</h3>
+              <h2>Contact Us.</h2>
             </div>
 
             <div class="col-md-offset-1 col-md-10">
