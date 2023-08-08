@@ -8,7 +8,7 @@ export default function HeaderBottom() {
           <div class="row">
             <div class="col-md-5">
               <div class="hero-img mb-30">
-                <img src="img/hero1.png" alt="sai chandan vanam" />
+                <img src="img/hero1.png" alt="sai-chandan-vanam" />
               </div>
             </div>
 
