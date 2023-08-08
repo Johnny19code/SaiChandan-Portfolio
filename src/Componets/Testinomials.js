@@ -14,7 +14,7 @@ export default function Testinomials() {
               <div class="owl-carousel owl-theme text-center">
                 <div class="citem">
                   <div class="author-img">
-                    <img src="img/clients/2.png" alt="" />
+                    <img src="img/clients/2.png" alt="client-1" />
                   </div>
                   <p>
                     "Sai Chandan's web designs are captivating, user-friendly,
@@ -27,7 +27,7 @@ export default function Testinomials() {
 
                 <div class="citem">
                   <div class="author-img">
-                    <img src="img/clients/3.png" alt="" />
+                    <img src="img/clients/3.png" alt="client-2" />
                   </div>
                   <p>
                     "Working with Sai Chandan was a delight! Professional,
@@ -39,7 +39,7 @@ export default function Testinomials() {
 
                 <div class="citem">
                   <div class="author-img">
-                    <img src="img/clients/1.jpg" alt="" />
+                    <img src="img/clients/1.jpg" alt="client-3" />
                   </div>
                   <p>
                     "Innovative, efficient, and a true problem solver. Sai
