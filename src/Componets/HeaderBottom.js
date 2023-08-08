@@ -15,7 +15,7 @@ export default function HeaderBottom() {
             <div class="col-md-7">
               <div class="content mb-30">
                 <h1>About Me.</h1>
-                <h2><span class="sub-title">UI / UX Designer & Web Designer</span></h2>
+                <span class="sub-title">UI / UX Designer & Web Designer</span>
                 <p>
                   I am <b>Sai Chandan</b> Vanam, and I'm a web designer with one
                   year of experience. I previously worked at Askmeguru
