@@ -21,56 +21,6 @@ const Main = () => {
           <span className="bar"></span>
         </span>
 
-        {/* <div className="global-color">
-          <span className="setting-toggle">
-            <i className="las la-cog"></i>
-          </span>
-          <div className="inner">
-            <div className="overlay"></div>
-            <div className="global-color-option">
-              <span className="close-settings">
-                <i className="las la-times"></i>
-              </span>
-              <h2>Configuration</h2>
-              <div className="global-color-option-inner">
-                <p>Colors</p>
-                <div className="color-boxed">
-                  <a href="#" className="clr-active" onclick="color1();"></a>
-                  <a href="#" onclick="color2();"></a>
-                  <a href="#" onclick="color3();"></a>
-                  <a href="#" onclick="color4();"></a>
-                  <a href="#" onclick="color5();"></a>
-                  <a href="#" onclick="color6();"></a>
-                  <a href="#" onclick="color7();"></a>
-                  <a href="#" onclick="color8();"></a>
-                </div>
-
-                <p>THREE DIMENSIONAL SHAPES</p>
-                <ul className="themes">
-                  <li>
-                    <a href="home1.html">Earth Lines Sphere</a>
-                  </li>
-                  <li className="active">
-                    <a href="home2.html">3D Abstract Ball</a>
-                  </li>
-                  <li>
-                    <a href="home3.html">Water Waves</a>
-                  </li>
-                  <li>
-                    <a href="home4.html">Liquids Wavy</a>
-                  </li>
-                  <li>
-                    <a href="home6.html">Solid Color</a>
-                  </li>
-                  <li>
-                    <a href="home5.html">Simple Strings</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         <div className="responsive-sidebar-menu">
           <div className="overlay"></div>
           <div className="sidebar-menu-inner">
@@ -194,7 +144,7 @@ const Main = () => {
           </div>
           <img className="me" src="assets/images/me.png" alt="Me" />
           <h5 className="email">saichandanvanam@gmail.com</h5>
-          <h2 className="address">Hyderabad</h2>
+          {/* <h2 className="address">Hyderabad</h2> */}
           <p className="copyright">
             &copy; 2023 Sai Chandan. All Rights Reserved
           </p>
@@ -233,7 +183,7 @@ const Main = () => {
                 <h5 className="email" style={{ textAlign: "center" }}>
                   saichandanvanam@gmail.com
                 </h5>
-                <h2 className="address">Hyderabad</h2>
+                {/* <h2 className="address">Hyderabad</h2> */}
                 <p className="copyright">
                   &copy; 2023 Sai Chandan. All Rights Reserved
                 </p>
@@ -287,14 +237,16 @@ const Main = () => {
                       I design and code beautifully simple things and i love
                       what i do. Just simple like that!
                     </p>
-                    <a
-                      href="#skills"
-                      className="go-to-project-btn scroll-to scroll-animation"
-                      data-animation="rotate_up"
-                    >
-                      <img src="assets/images/round-text.png" alt="" />
-                      <i className="las la-arrow-down"></i>
-                    </a>
+                    <div className="scrollimg">
+                      <a
+                        href="#skills"
+                        className="go-to-project-btn scroll-to scroll-animation"
+                        data-animation="rotate_up"
+                      >
+                        <img src="assets/images/round-text.png" alt="" />
+                        <i className="las la-arrow-down"></i>
+                      </a>
+                    </div>
 
                     <div className="facts d-flex">
                       <div
