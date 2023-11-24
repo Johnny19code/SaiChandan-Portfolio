@@ -533,6 +533,21 @@ const Main = () => {
                           <p className="name">Prompt Engineering </p>
                         </div>
                       </div>
+                                <div
+                        className="col-md-3 scroll-animation"
+                        data-animation="fade_from_bottom"
+                      >
+                        <div className="skill">
+                          <div className="skill-inner">
+                            <img
+                              src="assets/images/github.png"
+                              alt="Laravel/PHP"
+                            />
+                            <h1 className="percent">60%</h1>
+                          </div>
+                          <p className="name">GitHub </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
