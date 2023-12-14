@@ -12,9 +12,7 @@ const Main = () => {
 
         <Video />
 
-        <div className="page-loader">
-          <div className="bounceball"></div>
-        </div>
+        
 
         <span className="icon-menu">
           <span className="bar"></span>
@@ -140,7 +138,7 @@ const Main = () => {
         <div className="left-sidebar">
           <div className="sidebar-header d-flex align-items-center justify-content-between">
             <img src="assets/images/logo.png" alt="Logo" />
-            <span className="designation">Web Designer </span>
+            <span className="designation">Web Designer & Digital Makerting </span>
           </div>
           <img className="me" src="assets/images/me.png" alt="Me" />
           <h5 className="email">saichandanvanam@gmail.com</h5>
@@ -177,9 +175,9 @@ const Main = () => {
               <div className="left-sidebar">
                 <div className="sidebar-header d-flex align-items-center justify-content-between">
                   <img src="assets/images/logo.png" alt="Logo" />
-                  <span className="designation">Web Designer</span>
+                  <span className="designation">Web Designer & Digital Makerting</span>
                 </div>
-                <img className="me" src="assets/images/me.png" alt="Me" />
+                <img className="me" src="assets/images/me.png" alt="Sai chandan" />
                 <h5 className="email" style={{ textAlign: "center" }}>
                   saichandanvanam@gmail.com
                 </h5>
@@ -226,8 +224,8 @@ const Main = () => {
                         className="scroll-animation"
                         data-animation="fade_from_bottom"
                       >
-                        Say Hi from <span>Sai Chandan</span>, Web Designer and
-                        Developer
+                        Hi from <span>Sai Chandan</span>, Web Designer and
+                        Digital Marketer
                       </h1>
                     </div>
                     <p
