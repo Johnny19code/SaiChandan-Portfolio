@@ -220,13 +220,13 @@ const Main = () => {
                       >
                         <i className="las la-home"></i> Introduce
                       </h4>
-                      <h1
+                      <h2
                         className="scroll-animation"
                         data-animation="fade_from_bottom"
                       >
                         Hi from <span>Sai Chandan</span>, Web Designer and
                         Digital Marketer
-                      </h1>
+                      </h2>
                     </div>
                     <p
                       className="scroll-animation"
@@ -297,13 +297,7 @@ const Main = () => {
                       className="scroll-animation"
                       data-animation="fade_from_bottom"
                     >
-                      Since beginning my journey as a freelance designer nearly
-                      1 years ago, I've done remote work for agencies, consulted
-                      for startups, and collaborated with talented people to
-                      create digital products for both business and consumer
-                      use. I'm quietly confident, naturally curious, and
-                      perpetually working on improving my chopsone design
-                      problem at a time.
+                      "Welcome to the digital realm where creativity meets strategy. With 1.8+ years of comprehensive expertise in web design and digital marketing, Sai Chandan Vanam transforms concepts into compelling online experiences. From leading teams to delivering top-notch solutions, every project is a testament to precision and innovation. Ready to elevate your brand's digital journey? Let's collaborate for success."
                     </p>
                   </div>
                 </div>
