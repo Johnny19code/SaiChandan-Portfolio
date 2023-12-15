@@ -138,7 +138,7 @@ const Main = () => {
         <div className="left-sidebar">
           <div className="sidebar-header d-flex align-items-center justify-content-between">
             <img src="assets/images/logo.png" alt="Logo" />
-            <span className="designation">Web Designer & Digital Makerting </span>
+            <span className="designation">Web Designer & Digital Makerter </span>
           </div>
           <img className="me" src="assets/images/me.png" alt="Me" />
           <h5 className="email">saichandanvanam@gmail.com</h5>
@@ -175,7 +175,7 @@ const Main = () => {
               <div className="left-sidebar">
                 <div className="sidebar-header d-flex align-items-center justify-content-between">
                   <img src="assets/images/logo.png" alt="Logo" />
-                  <span className="designation">Web Designer & Digital Makerting</span>
+                  <span className="designation">Web Designer & Digital Makerter</span>
                 </div>
                 <img className="me" src="assets/images/me.png" alt="Sai chandan" />
                 <h5 className="email" style={{ textAlign: "center" }}>
