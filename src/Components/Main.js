@@ -289,9 +289,8 @@ const Main = () => {
                         className="scroll-animation"
                         data-animation="fade_from_bottom"
                       >
-                        Every great design begin with
-                        <br />
-                        an even <span>better story</span>
+                          Empower Your Digital Presence with Sai Chandan Vanam: Expert Web Designer and Digital Marketer
+                        
                       </h1>
                     </div>
                     <p
