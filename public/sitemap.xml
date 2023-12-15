@@ -3,8 +3,10 @@
 
 
 <url>
-<loc>https://sai-chandan-portfolio.vercel.app/</loc>
-<lastmod>2023-12-15T13:45:29+00:00</lastmod>
+  <loc>https://sai-chandan-portfolio.vercel.app</loc>
+  <priority>1.0</priority>
+  <changefreq>monthly</changefreq>
+  <lastmod>2023-12-15</lastmod>
 </url>
 
 
