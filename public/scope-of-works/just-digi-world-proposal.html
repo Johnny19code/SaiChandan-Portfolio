@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal: Sai Chandan x Just Digi World</title>
+  <meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="http://saichandan-vanam.vercel.app/"> 
+    <style>
+        /* --- Root Variables & Reset --- */
+        :root {
+            --bg-deep: #0a0a0c;
+            --bg-card: #16161a;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #06b6d4;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --neon-shadow: 0 0 15px rgba(139, 92, 246, 0.3);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Global Utilities --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 80px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+            color: white;
+            box-shadow: var(--neon-shadow);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(6, 182, 212, 0.5);
+        }
+
+        /* --- Navigation --- */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 12, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        /* --- About Section --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .collaboration-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .collaboration-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .collaboration-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            color: var(--text-muted);
+        }
+
+        .collaboration-list li::before {
+            content: "✦";
+            color: var(--accent-blue);
+            margin-right: 12px;
+            font-weight: bold;
+        }
+
+        /* --- Scope of Work --- */
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .scope-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: var(--transition);
+        }
+
+        .scope-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-5px);
+            background: rgba(22, 22, 26, 0.8);
+        }
+
+        .scope-card h3 {
+            margin-bottom: 12px;
+            color: var(--accent-blue);
+        }
+
+        /* --- Process Workflow --- */
+        .workflow {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-purple);
+        }
+
+        .step-num {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent-purple);
+            margin-right: 25px;
+            min-width: 40px;
+        }
+
+        /* --- Pricing Section --- */
+        .pricing-box {
+            background: linear-gradient(145deg, #1a1a20, #0a0a0c);
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 3rem;
+            border-radius: 24px;
+            text-align: center;
+            border: 2px solid var(--accent-purple);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-box::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, transparent, var(--accent-blue), transparent);
+            animation: rotate 6s linear infinite;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+
+        .price-tag {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 1rem 0;
+            color: white;
+        }
+
+        .payment-terms {
+            color: var(--accent-blue);
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* --- Why Choose Me --- */
+        .why-me-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-box {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-box h4 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* --- Contact --- */
+        .contact-area {
+            text-align: center;
+            background: rgba(139, 92, 246, 0.05);
+            border-radius: 30px;
+            padding: 4rem 2rem;
+        }
+
+        /* --- Footer --- */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background: linear-gradient(to bottom, transparent, rgba(139, 92, 246, 0.05));
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            .section-title h2 { font-size: 2rem; }
+            .step { flex-direction: column; text-align: center; }
+            .step-num { margin-right: 0; margin-bottom: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            
+            <div class="logo">
+                <a href="https://saichandan-vanam.vercel.app/" target="_blank">                
+                CHANDAN<span class="text-gradient">.ADSFIX</span>
+                </a>
+                </div>
+            
+            <a href="https://wa.me/919502531670" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Discuss Project</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero visible">
+        <div class="container">
+            <h1 class="text-gradient">Performance-Driven Google & Meta Ads Management</h1>
+            <p>Strategic Campaign Creation, Optimization & Reporting tailored for Just Digi World.</p>
+            <a href="https://wa.me/919502531670" class="btn btn-primary">Contact on WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Collaboration Section -->
+    <section class="container">
+        <div class="about-grid">
+            <div>
+                <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem;">Strategic <span class="text-gradient">Partnership</span></h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.5rem;">A collaborative framework designed for efficiency, clarity, and scalable performance across multiple client industries.</p>
+            </div>
+            <div class="collaboration-card">
+                <ul class="collaboration-list">
+                    <li>Sai Chandan functions as your dedicated Freelance Digital Marketer.</li>
+                    <li>Just Digi World acts as the single point of contact.</li>
+                    <li>Initial phase includes 4 projects from diverse industries.</li>
+                    <li>Structured requirement forms used for campaign planning.</li>
+                    <li>Real-time coordination via a dedicated WhatsApp group.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scope of Work -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Scope of <span class="text-gradient">Work</span></h2>
+            <p style="color: var(--text-muted);">End-to-end digital advertising management</p>
+        </div>
+        <div class="grid-3">
+            <div class="scope-card">
+                <h3>Analysis</h3>
+                <p>Deep dive into agency requirements and client objectives to ensure alignment.</p>
+            </div>
+            <div class="scope-card">
+                <h3>Ad Operations</h3>
+                <p>Expert setup and management of Google Ads and Meta (FB/IG) Ads campaigns.</p>
+            </div>
+            <div class="scope-card">
+                <h3>Scaling</h3>
+                <p>Continuous optimization and performance scaling to maximize ROI.</p>
+            </div>
+            <div class="scope-card">
+                <h3>Creative Edge</h3>
+                <p>Conversion-focused landing page creation specifically for Google Ads traffic.</p>
+            </div>
+            <div class="scope-card">
+                <h3>Intelligence</h3>
+                <p>In-depth competitor research and market analysis for every industry niche.</p>
+            </div>
+            <div class="scope-card">
+                <h3>Reporting</h3>
+                <p>Weekly transparent insights and data-driven performance reports.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Process <span class="text-gradient">Workflow</span></h2>
+        </div>
+        <div class="workflow">
+            <div class="step">
+                <div class="step-num">01</div>
+                <div>
+                    <strong>Requirement Collection</strong>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Gathering industry-specific data via structured forms.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">02</div>
+                <div>
+                    <strong>Research & Strategy</strong>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Competitor benchmarking and funnel architecture.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">03</div>
+                <div>
+                    <strong>Setup & Launch</strong>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Campaign configuration and landing page deployment.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">04</div>
+                <div>
+                    <strong>Optimization</strong>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Daily monitoring, A/B testing, and budget scaling.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">05</div>
+                <div>
+                    <strong>Reporting</strong>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Weekly updates and strategic reviews via WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Investment <span class="text-gradient">Terms</span></h2>
+        </div>
+        <div class="pricing-box">
+            <div class="payment-terms">Monthly Retainer</div>
+            <div class="price-tag">₹40,000</div>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Comprehensive management for 4 projects</p>
+            <div style="background: rgba(6, 182, 212, 0.1); padding: 10px; border-radius: 8px; border: 1px dashed var(--accent-blue); color: var(--accent-blue); font-weight: bold;">
+                Payment Cycle: Every 7 Days
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Why <span class="text-gradient">Sai Chandan?</span></h2>
+        </div>
+        <div class="why-me-grid">
+            <div class="feature-box">
+                <h4 class="text-gradient">Performance First</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Obsessed with conversions, not just clicks.</p>
+            </div>
+            <div class="feature-box">
+                <h4 class="text-gradient">Multi-Industry</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Proven experience across various business sectors.</p>
+            </div>
+            <div class="feature-box">
+                <h4 class="text-gradient">Data-Driven</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Every decision is backed by cold, hard analytics.</p>
+            </div>
+            <div class="feature-box">
+                <h4 class="text-gradient">Transparent</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Real-time communication and honest reporting.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container" id="contact">
+        <div class="contact-area">
+            <h2 style="margin-bottom: 10px;">Ready to Start?</h2>
+            <p style="color: var(--text-muted); margin-bottom: 2rem;">Sai Chandan – Freelance Digital Marketer</p>
+            <a href="https://wa.me/919502531670" class="btn btn-primary">Send WhatsApp Message</a>
+        </div>
+    </section>
+
+    <footer>
+        <a href="https://saichandan-vanam.vercel.app/" target="_blank">
+        <div class="container">
+            <p style="color: var(--text-muted); font-size: 0.85rem;">&copy; 2026 Sai Chandan. Digital Marketing Proposal for Just Digi World.</p>
+        </div>
+        </a>
+    </footer>
+
+    <script>
+        // Scroll Animation Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Simple smooth scroll for nav links (if any were added)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
