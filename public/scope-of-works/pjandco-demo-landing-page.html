@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pj & Co | Premium Wedding Photography Vizag</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark: #0A0A0A;
+            --soft-beige: #F5F5DC;
+        }
+        body {
+            background-color: var(--dark);
+            color: var(--soft-beige);
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-text { color: var(--gold); }
+        .gold-bg { background-color: var(--gold); }
+        .gold-border { border-color: var(--gold); }
+        
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--dark);
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-primary:hover {
+            background-color: #b8962d;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--dark); }
+        ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+        .sticky-cta {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            width: 90%;
+            max-width: 400px;
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .sticky-cta { display: flex; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-bold serif tracking-widest gold-text">PJ & CO</div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest items-center">
+                <a href="#about" class="hover:text-yellow-500 transition">Our Story</a>
+                <a href="#portfolio" class="hover:text-yellow-500 transition">Gallery</a>
+                <a href="#packages" class="hover:text-yellow-500 transition">Packages</a>
+                <a href="#contact" class="btn-primary px-6 py-2 rounded-full text-xs">Book Your Date</a>
+            </div>
+            <a href="tel:+918712365412" class="md:hidden gold-text">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 pb-12 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/80 to-black z-10"></div>
+            <!-- Background Image/Video Placeholder -->
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover opacity-40" alt="Wedding Background">
+        </div>
+
+        <div class="relative z-20 max-w-5xl mx-auto px-6 text-center fade-in">
+            <span class="gold-text uppercase tracking-[0.3em] text-sm mb-4 block">Vizag's Premier Wedding Studio</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl mb-6 leading-tight">Capture the <span class="italic">Soul</span> of Your Love Story</h1>
+            <p class="text-lg md:text-xl text-beige/80 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Cinematic storytelling for couples who value timeless elegance and authentic emotions. Limited availability for 2026.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center mb-16">
+                <a href="#contact" class="btn-primary px-10 py-4 rounded-full text-sm">Check Availability</a>
+                <a href="https://wa.me/919000000000" class="border border-white/20 hover:bg-white/10 px-10 py-4 rounded-full text-sm transition flex items-center justify-center gap-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-5 h-5" alt="WA"> WhatsApp Us
+                </a>
+            </div>
+
+            <!-- YouTube Embed -->
+            <div class="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-2xl video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/J2FXhGjcYk4?si=j6us2ZHEYenjnI59&amp;start=1" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?q=80&w=1974&auto=format&fit=crop" alt="Pj & Co Portrait" class="rounded-lg shadow-2xl grayscale hover:grayscale-0 transition duration-700">
+                <div class="absolute -bottom-6 -right-6 w-48 h-48 border-2 gold-border -z-10 hidden md:block"></div>
+            </div>
+            <div>
+                <h2 class="text-4xl md:text-5xl mb-8">The Art of <span class="gold-text italic">Timeless</span> Preservation</h2>
+                <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                    Based in the heart of Visakhapatnam, <strong>Pj & Co</strong> isn't just about taking pictures. We are architects of memories. We specialize in capturing those fleeting, unscripted moments—the tear in a father's eye, the subtle squeeze of a hand, and the explosive joy of the dance floor.
+                </p>
+                <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                    Our approach is cinematic and emotional. We believe every couple has a unique rhythm, and our goal is to translate that rhythm into a visual legacy that feels as fresh forty years from now as it does today.
+                </p>
+                <div class="flex items-center gap-4 text-sm tracking-widest gold-text font-bold">
+                    <span>EST. 2015</span>
+                    <span class="w-12 h-[1px] bg-gold"></span>
+                    <span>100+ LOVE STORIES TOLD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl md:text-5xl mb-4 text-white">Why Couples Trust <span class="gold-text">Pj & Co</span></h2>
+            <div class="w-24 h-1 gold-bg mx-auto"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="glass-card p-10 rounded-2xl text-center hover:border-gold/50 transition duration-500">
+                <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full border border-gold/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 gold-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl mb-4">Cinematic Storytelling</h3>
+                <p class="text-gray-400 font-light">We don't just record events; we create films that feel like Hollywood productions of your life.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="glass-card p-10 rounded-2xl text-center hover:border-gold/50 transition duration-500">
+                <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full border border-gold/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 gold-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl mb-4">Candid Expertise</h3>
+                <p class="text-gray-400 font-light">Natural, unposed moments that capture the true essence of your personality and love.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="glass-card p-10 rounded-2xl text-center hover:border-gold/50 transition duration-500">
+                <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full border border-gold/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 gold-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl mb-4">Fast Delivery</h3>
+                <p class="text-gray-400 font-light">Premium highlights delivered within 7 days, so you can relive the magic while the glow is still fresh.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section id="portfolio" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6 mb-12 flex justify-between items-end">
+            <div>
+                <h2 class="text-4xl md:text-5xl mb-2">Portfolio <span class="gold-text italic">Highlights</span></h2>
+                <p class="text-gray-500">A glimpse into the luxury weddings we've documented.</p>
+            </div>
+            <a href="#" class="hidden md:block gold-text uppercase text-xs tracking-widest border-b border-gold pb-1">View Full Gallery</a>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="aspect-[3/4] overflow-hidden rounded-lg group">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700" alt="Gallery">
+            </div>
+            <div class="aspect-[3/4] overflow-hidden rounded-lg group md:mt-12">
+                <img src="https://images.unsplash.com/photo-1519225495810-758b631f40b5?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700" alt="Gallery">
+            </div>
+            <div class="aspect-[3/4] overflow-hidden rounded-lg group">
+                <img src="https://images.unsplash.com/photo-1522673607200-1648832cee98?q=80&w=2074&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700" alt="Gallery">
+            </div>
+            <div class="aspect-[3/4] overflow-hidden rounded-lg group md:mt-12">
+                <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition duration-700" alt="Gallery">
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages / Offer Section -->
+    <section id="packages" class="py-24 bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-4xl md:text-5xl mb-6 font-bold">Invest in Your <span class="gold-text">Legacy</span></h2>
+                <p class="text-gray-400">Every wedding is unique. We offer bespoke collections designed to fit your specific vision.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="glass-card p-10 rounded-3xl border-gold/20 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 gold-bg text-black text-[10px] px-4 py-1 font-bold uppercase tracking-widest">Most Popular</div>
+                    <h3 class="text-2xl mb-2">The Heritage Collection</h3>
+                    <p class="text-gold text-4xl mb-6 serif">Starts ₹1.5L</p>
+                    <ul class="space-y-4 mb-10 text-gray-300">
+                        <li class="flex items-center gap-3"><span class="gold-text">✓</span> 2 Days Coverage</li>
+                        <li class="flex items-center gap-3"><span class="gold-text">✓</span> Cinematic Highlight Film</li>
+                        <li class="flex items-center gap-3"><span class="gold-text">✓</span> 300+ Color Graded Photos</li>
+                        <li class="flex items-center gap-3"><span class="gold-text">✓</span> Premium Coffee Table Album</li>
+                        <li class="flex items-center gap-3"><span class="gold-text">✓</span> Drone Aerial Shots</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary w-full py-4 rounded-xl text-center inline-block">Secure Your Date</a>
+                </div>
+
+                <div class="glass-card p-10 rounded-3xl border-white/5 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl mb-2">Bespoke Excellence</h3>
+                        <p class="text-gray-400 mb-6">For destination weddings or extended celebrations.</p>
+                        <p class="text-sm text-gray-500 mb-8 italic">We tailor every aspect of our production to match the scale and grandeur of your celebration.</p>
+                    </div>
+                    <a href="https://wa.me/919000000000" class="border border-white/20 hover:border-gold/50 w-full py-4 rounded-xl text-center inline-block transition">Get Custom Quote</a>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <p class="text-red-400 text-sm font-semibold animate-pulse">⚠️ Limited Slots: Only 3 spots remaining for the Q4 wedding season.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 border-t border-white/5">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="mb-8">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 gold-text mx-auto opacity-30" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017C10.4647 13 10.017 12.5523 10.017 12V9C10.017 7.89543 10.9124 7 12.017 7H19.017C20.1216 7 21.017 7.89543 21.017 9V15C21.017 17.2091 19.2261 19 17.017 19H15.017C14.4647 19 14.017 19.4477 14.017 20V21H14.017ZM3.017 21L3.017 18C3.017 16.8954 3.91243 16 5.017 16H8.017C8.56929 16 9.017 15.5523 9.017 15V9C9.017 8.44772 8.56929 8 8.017 8H4.017C3.46472 8 3.017 8.44772 3.017 9V12C3.017 12.5523 2.56929 13 2.017 13H0.017C-0.535282 13 -1.017 12.5523 -1.017 12V9C-1.017 7.89543 -0.121573 7 0.983 7H8.017C9.12157 7 10.017 7.89543 10.017 9V15C10.017 17.2091 8.22614 19 6.017 19H4.017C3.46472 19 3.017 19.4477 3.017 20V21H3.017Z" />
+                </svg>
+            </div>
+            <p class="text-2xl md:text-3xl italic serif leading-relaxed mb-8">
+                "Pj & Co didn't just take photos; they captured the feeling of our day. Looking at our album feels like stepping back into that magic. Choosing them was the best decision we made for our Vizag wedding."
+            </p>
+            <div class="flex items-center justify-center gap-4">
+                <div class="w-12 h-[1px] bg-gold"></div>
+                <span class="font-bold tracking-widest uppercase text-sm">Ananya & Rahul</span>
+                <div class="w-12 h-[1px] bg-gold"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Capture Section -->
+    <section id="contact" class="py-24 bg-black relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-5xl mb-6">Ready to <span class="gold-text">Begin?</span></h2>
+                <p class="text-gray-400 text-lg mb-8">We would love to hear about your vision. Fill out the form or reach out directly via WhatsApp for an immediate response.</p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-zinc-900 gold-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 uppercase">Studio Location</p>
+                            <p class="text-white">MVP Colony, Visakhapatnam, AP</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-zinc-900 gold-text">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-500 uppercase">Email Us</p>
+                            <p class="text-white">hello@pjandco.in</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-10 rounded-3xl border-gold/10">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase tracking-widest text-gray-500">Full Name</label>
+                            <input type="text" class="w-full bg-zinc-900 border border-white/10 rounded-lg p-3 focus:border-gold outline-none transition text-white" placeholder="Rahul Sharma">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs uppercase tracking-widest text-gray-500">Phone</label>
+                            <input type="tel" class="w-full bg-zinc-900 border border-white/10 rounded-lg p-3 focus:border-gold outline-none transition text-white" placeholder="+91">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs uppercase tracking-widest text-gray-500">Wedding Date</label>
+                        <input type="date" class="w-full bg-zinc-900 border border-white/10 rounded-lg p-3 focus:border-gold outline-none transition text-white">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-xs uppercase tracking-widest text-gray-500">Venue / Location</label>
+                        <input type="text" class="w-full bg-zinc-900 border border-white/10 rounded-lg p-3 focus:border-gold outline-none transition text-white" placeholder="Vizag / Destination">
+                    </div>
+                    <button type="submit" class="btn-primary w-full py-4 rounded-lg">Check Availability</button>
+                    <p class="text-center text-xs text-gray-600 mt-4 italic">Response time: Usually within 2 hours</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="text-3xl serif gold-text mb-6">PJ & CO</div>
+            <div class="flex justify-center gap-8 mb-8">
+                <a href="#" class="text-gray-500 hover:text-white transition">Instagram</a>
+                <a href="#" class="text-gray-500 hover:text-white transition">Facebook</a>
+                <a href="#" class="text-gray-500 hover:text-white transition">YouTube</a>
+            </div>
+            <p class="text-gray-600 text-sm">© 2024 Pj & Co Photography. All Rights Reserved. Crafted for Luxury.</p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta gap-2">
+        <a href="https://wa.me/919000000000" class="flex-1 bg-green-600 text-white py-4 rounded-full flex items-center justify-center gap-2 font-bold shadow-xl">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="w-5 h-5 invert" alt="WA"> WhatsApp
+        </a>
+        <a href="#contact" class="flex-1 btn-primary py-4 rounded-full flex items-center justify-center font-bold shadow-xl">
+            Book Now
+        </a>
+    </div>
+
+</body>
+</html>
